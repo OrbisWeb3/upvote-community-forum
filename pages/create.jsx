@@ -8,7 +8,6 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import { useOrbis, User } from "@orbisclub/components";
 import { GlobalContext } from "../contexts/GlobalContext";
-import { PassportLogo } from "../components/Icons";
 
 export default function Create() {
   const { orbis, user, setConnectModalVis } = useOrbis();

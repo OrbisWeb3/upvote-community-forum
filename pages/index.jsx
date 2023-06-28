@@ -6,7 +6,7 @@ import Hero from '../components/Hero';
 import Sidebar from '../components/Sidebar';
 import PostItem from '../components/PostItem';
 import Footer from '../components/Footer';
-import { SchellingPointIcon , LoadingCircle } from "../components/Icons";
+import { LoadingCircle } from "../components/Icons";
 import { Orbis, useOrbis } from "@orbisclub/components";
 import useDidToAddress from "../hooks/useDidToAddress";
 
@@ -84,12 +84,12 @@ function Home({defaultPosts}) {
     <>
       <Head>
         {/** Title */}
-        <title key="title">Schelling Point Forum | The Joy of Collective Thriving</title>
-        <meta property="og:title" content="Schelling Point Forum | The Joy of Collective Thriving" key="og_title" />
+        <title key="title">Make this your own community forum | Orbis</title>
+        <meta property="og:title" content="Make this your own community forum | Orbis" key="og_title" />
 
         {/** Description */}
-        <meta name="description" content="The joy of collective thriving - the schelling point for planetary wellbeing ✨ Built with 💚 in the Gitcoin community" key="description"></meta>
-        <meta property="og:description" content="The joy of collective thriving - the schelling point for planetary wellbeing ✨ Built with 💚 in the Gitcoin community" key="og_description"/>
+        <meta name="description" content="Build your own community forum powered by Orbis." key="description"></meta>
+        <meta property="og:description" content="Build your own community forum powered by Orbis." key="og_description"/>
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip bg-main">
