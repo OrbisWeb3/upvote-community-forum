@@ -217,22 +217,4 @@ const NavItem = ({selected, category, onClick}) => {
   )
 }
 
-/** Load blog articles */
-Home.getInitialProps = async (context) => {
-  let orbis_server = new Orbis({
-    useLit: false
-  });
-
-  let { data, error } = await orbis_server.getPosts({
-    context: global.orbis_context,
-    only_master: true,
-    include_child_contexts: true
-  });
-
-  /** Return results */
-  return {
-    defaultPosts: data
-  };
-}
-
 export default Home;
