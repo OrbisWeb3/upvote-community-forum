@@ -6,6 +6,7 @@ import { shortAddress, getIpfsLink } from "../utils";
 import { ExternalLinkIcon, EditIcon } from "./Icons";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import Upvote from "./Upvote";
+import UrlMetadata from "./UrlMetadata";
 import ProofBadge from "./ProofBadge";
 
 /** For Markdown support */
@@ -111,9 +112,14 @@ export default function ArticleContent({post}) {
           {reactComponent}
         </div>
 
+        {/** Display URL metadata if any */}
+        {post.indexing_metadata?.urlMetadata?.title &&
+          <UrlMetadata metadata={post.indexing_metadata.urlMetadata} />
+        }
+
         {/** Show commenting feed only if not new post  */}
         {post.stream_id &&
-          <div className="mt-6">
+          <div className="mt-8">
             <Discussion context={post.content.context} master={post.stream_id} />
           </div>
         }
@@ -122,6 +128,8 @@ export default function ArticleContent({post}) {
     </>
   )
 }
+
+
 
 export const theme = {
   "code[class*=\"language-\"]": {

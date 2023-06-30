@@ -6,7 +6,7 @@ import ProofBadge from "./ProofBadge";
 import { User, UserBadge, useOrbis } from "@orbisclub/components";
 import { shortAddress } from "../utils";
 import { ExternalLinkIcon, CommentsIcon } from "./Icons";
-
+import UrlMetadata from "./UrlMetadata";
 
 export default function PostItem({post}) {
   const { orbis, user } = useOrbis();
@@ -80,6 +80,10 @@ export default function PostItem({post}) {
                   </Link>
                 </h2>
                 <p className="text-sm text-tertiary alte">{cleanDescription()}</p>
+                {/** Display URL metadata if any */}
+                {post.indexing_metadata?.urlMetadata?.title &&
+                  <UrlMetadata showDesc={false} imgSize="10rem" metadata={post.indexing_metadata.urlMetadata} />
+                }
               </div>
               <div className="flex items-center text-sm text-secondary flex flex-row space-x-1.5">
                 <User details={post.creator_details} height={35} />
