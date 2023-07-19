@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 /** Will display the metadata of a URL */
-export default function UrlMetadata({metadata, imgSize = "20rem", showDesc = true}) {
+export default function UrlMetadata({metadata, imgSize = "15rem", showDesc = true}) {
   /** Return domain name for a URL */
   function getDomainName(url) {
     // Remove the protocol (http:// or https://) if present
