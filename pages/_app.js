@@ -27,7 +27,7 @@ let orbis = new Orbis({
 
 export default function App({ Component, pageProps }) {
   return(
-    <OrbisProvider defaultOrbis={orbis} authMethods={["metamask", "wallet-connect", "email", "google"]}>
+    <OrbisProvider defaultOrbis={orbis} authMethods={["metamask", "wallet-connect", "email"]}>
       <GlobalContext.Provider>
         <Component {...pageProps} />
       </GlobalContext.Provider>
